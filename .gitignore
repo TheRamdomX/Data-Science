@@ -1,0 +1,7 @@
+venv/
+descargas/
+Datos/
+
+dataset_modelo.parquet
+Datos_limpios.parquet
+Datos_Unificados.parquet
