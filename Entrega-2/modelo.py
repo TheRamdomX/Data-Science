@@ -3,7 +3,9 @@ import numpy as np
 import os
 from sklearn.linear_model import SGDClassifier
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report, roc_auc_score, roc_curve, ConfusionMatrixDisplay, RocCurveDisplay
+from sklearn.metrics import (classification_report, roc_auc_score, roc_curve,
+                             ConfusionMatrixDisplay, RocCurveDisplay,
+                             confusion_matrix, precision_score, recall_score, f1_score)
 from sklearn.preprocessing import StandardScaler
 from imblearn.under_sampling import RandomUnderSampler
 import matplotlib.pyplot as plt
@@ -400,6 +402,11 @@ for r in results:
     save_data[f"{key}_fpr"] = fpr
     save_data[f"{key}_tpr"] = tpr
     save_data[f"{key}_auc"] = np.array([r["auc"]])
+    cm = confusion_matrix(r["y_true"], r["y_pred"])
+    save_data[f"{key}_cm"] = cm
+    save_data[f"{key}_precision"] = np.array([precision_score(r["y_true"], r["y_pred"])])
+    save_data[f"{key}_recall"] = np.array([recall_score(r["y_true"], r["y_pred"])])
+    save_data[f"{key}_f1"] = np.array([f1_score(r["y_true"], r["y_pred"])])
     save_labels.append(r["label"])
 save_data["labels"] = np.array(save_labels)
 np.savez(os.path.join(RUTA_SALIDA, "resultados_lr_rf.npz"), **save_data)

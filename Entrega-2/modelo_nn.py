@@ -2,7 +2,9 @@ import polars as pl
 import numpy as np
 import os
 from sklearn.neural_network import MLPClassifier
-from sklearn.metrics import classification_report, roc_auc_score, roc_curve, ConfusionMatrixDisplay, RocCurveDisplay
+from sklearn.metrics import (classification_report, roc_auc_score, roc_curve,
+                             ConfusionMatrixDisplay, RocCurveDisplay,
+                             confusion_matrix, precision_score, recall_score, f1_score)
 from sklearn.preprocessing import StandardScaler
 from imblearn.under_sampling import RandomUnderSampler
 import matplotlib.pyplot as plt
@@ -188,7 +190,7 @@ for label, features in [("NN-A", FEATURES_A), ("NN-B", FEATURES_B)]:
         random_state=RANDOM_SEED,
         verbose=True,
     )
-    print(f"  [{label}] Entrenando MLP (128→64→32)...")
+    print(f"  [{label}] Entrenando MLP (128-64-32)...")
     model.fit(X_res, y_res)
     print(f"  [{label}] Épocas usadas: {model.n_iter_}")
     del X_res, y_res; gc.collect()
@@ -254,6 +256,11 @@ for r in results:
     save_data[f"{key}_fpr"] = fpr
     save_data[f"{key}_tpr"] = tpr
     save_data[f"{key}_auc"] = np.array([r["auc"]])
+    cm = confusion_matrix(r["y_true"], r["y_pred"])
+    save_data[f"{key}_cm"] = cm
+    save_data[f"{key}_precision"] = np.array([precision_score(r["y_true"], r["y_pred"])])
+    save_data[f"{key}_recall"] = np.array([recall_score(r["y_true"], r["y_pred"])])
+    save_data[f"{key}_f1"] = np.array([f1_score(r["y_true"], r["y_pred"])])
     save_labels.append(r["label"])
 save_data["labels"] = np.array(save_labels)
 np.savez(os.path.join(RUTA_SALIDA, "resultados_nn.npz"), **save_data)
