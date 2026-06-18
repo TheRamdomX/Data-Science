@@ -2,6 +2,9 @@ venv/
 descargas/
 Datos/
 
-dataset_modelo.parquet
-Datos_limpios.parquet
-Datos_Unificados.parquet
+Entrega-1/dataset_modelo.parquet
+Entrega-1/Datos_limpios.parquet
+Entrega-1/Datos_Unificados.parquet
+
+Entrega-2/dataset_modelo.parquet
+Entrega-2/Datos_limpios.parquet
