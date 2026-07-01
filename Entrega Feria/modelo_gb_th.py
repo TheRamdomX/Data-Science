@@ -22,7 +22,7 @@ RUTA_SALIDA         = os.path.join(BASE_DIR, "EDA_Resultados")
 os.makedirs(RUTA_SALIDA, exist_ok=True)
 
 RANDOM_SEED = 42
-N_MUESTRA   = 2_000_000
+N_MUESTRA   = 80_000_000
 MAX_DEPTH   = 12
 N_FOLDS     = 5
 THRESHOLDS  = np.arange(0.50, 0.96, 0.1)
