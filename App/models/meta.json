@@ -1,0 +1,99 @@
+{
+  "features": [
+    "MontoEstimado",
+    "Valor Total Ofertado",
+    "NumeroOferentes",
+    "CantidadReclamos",
+    "fe_Region",
+    "fe_Sector",
+    "fe_TipoAdquisicion"
+  ],
+  "features_num": [
+    "MontoEstimado",
+    "Valor Total Ofertado",
+    "NumeroOferentes",
+    "CantidadReclamos"
+  ],
+  "freq_maps": {
+    "RegionUnidad": {
+      "Región Metropolitana de Santiago": 0.2320982193373178,
+      "Región del Biobío ": 0.11626770632953061,
+      "Región de Valparaíso ": 0.08232093075886474,
+      "Región del Maule ": 0.08106078530207486,
+      "Región del Libertador General Bernardo O´Higgins": 0.07883367108660543,
+      "Región de los Lagos ": 0.07455946343520795,
+      "Región de la Araucanía ": 0.06616535165773421,
+      "Región de Coquimbo ": 0.051619672670788284,
+      "Región de Antofagasta ": 0.046738537819794056,
+      "Región de Los Ríos": 0.03730030552098013,
+      "Región de Atacama ": 0.035505241176410074,
+      "Región del Ñuble": 0.025506372735595764,
+      "Región de Arica y Parinacota": 0.022240281449630184,
+      "Región de Magallanes y de la Antártica": 0.02068181584388598,
+      "Región de Tarapacá  ": 0.01944224419047227,
+      "Región Aysén del General Carlos Ibáñez del Campo": 0.009659400685107653
+    },
+    "sector": {
+      "Municipalidades": 0.3983808416742961,
+      "Salud": 0.3394831860591908,
+      "Gob. Central, Universidades": 0.10911316620547057,
+      "FFAA": 0.08675458538642747,
+      "Otros": 0.033453004289638,
+      "Obras Públicas": 0.030577815267819487,
+      "Legislativo y judicial": 0.0022374011171575232
+    },
+    "Tipo de Adquisicion": {
+      "Licitación Pública Entre 100 y 1000 UTM (LE)": 0.6657116992932899,
+      "Licitación Pública Mayor 1000 UTM (LP)": 0.1978788408719178,
+      "Licitación Pública Menor a 100 UTM (L1)": 0.1296869695816317,
+      "Licitación Privada entre 100 y 1000 UTM.": 0.002777463455781753,
+      "Licitación Pública MOP (O1)": 0.0023454135848823693,
+      "Licitación Privada Menor a 100 UTM.": 0.0008280955858904857,
+      "Licitación Privada Mayor a 1000 UTM": 0.0007715176266060425
+    }
+  },
+  "medianas": {
+    "MontoEstimado": 25000000.0,
+    "Valor Total Ofertado": 291600.0,
+    "NumeroOferentes": 12.0,
+    "CantidadReclamos": 383.0
+  },
+  "categories": {
+    "RegionUnidad": [
+      "Región Aysén del General Carlos Ibáñez del Campo",
+      "Región Metropolitana de Santiago",
+      "Región de Antofagasta ",
+      "Región de Arica y Parinacota",
+      "Región de Atacama ",
+      "Región de Coquimbo ",
+      "Región de Los Ríos",
+      "Región de Magallanes y de la Antártica",
+      "Región de Tarapacá  ",
+      "Región de Valparaíso ",
+      "Región de la Araucanía ",
+      "Región de los Lagos ",
+      "Región del Biobío ",
+      "Región del Libertador General Bernardo O´Higgins",
+      "Región del Maule ",
+      "Región del Ñuble"
+    ],
+    "sector": [
+      "FFAA",
+      "Gob. Central, Universidades",
+      "Legislativo y judicial",
+      "Municipalidades",
+      "Obras Públicas",
+      "Otros",
+      "Salud"
+    ],
+    "Tipo de Adquisicion": [
+      "Licitación Privada Mayor a 1000 UTM",
+      "Licitación Privada Menor a 100 UTM.",
+      "Licitación Privada entre 100 y 1000 UTM.",
+      "Licitación Pública Entre 100 y 1000 UTM (LE)",
+      "Licitación Pública MOP (O1)",
+      "Licitación Pública Mayor 1000 UTM (LP)",
+      "Licitación Pública Menor a 100 UTM (L1)"
+    ]
+  }
+}
